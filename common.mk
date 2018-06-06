@@ -40,6 +40,9 @@ else ifeq ($(TARGET),fedora)
 else ifeq ($(TARGET),centos6)
 	OS := centos6
 	DOCKERFILE ?= Dockerfile.centos6
+else ifeq ($(TARGET),alpine)
+	OS := alpine
+	DOCKERFILE ?= Dockerfile.alpine		
 else
 	OS := centos7
 	DOCKERFILE ?= Dockerfile
